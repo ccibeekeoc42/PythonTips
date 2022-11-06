@@ -60,6 +60,7 @@ sendEmail(sender, password, reciever, subject, body)
 ### QR Code Generator (texts & URLs)
 
 - Ensure to install the qrcode and image modules
+  `!pip install qrcode image`
 
 ```python
 def generateQRcode(text):
