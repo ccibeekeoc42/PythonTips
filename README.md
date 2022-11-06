@@ -2,6 +2,10 @@
 
 In this repo, we explore some tips and tricks and some short projects.
 
+### Software, Tools, and prerequisits
+
+1. Access to [Google Colab](https://colab.research.google.com/).
+
 ### Table Of Content
 
 - [Binary Search](https://github.com/ccibeekeoc42/PythonTips#binary-search)
@@ -10,6 +14,8 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Face Detection](https://github.com/ccibeekeoc42/PythonTips#face-detection)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
 - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
+- [Schedule Functions](https://github.com/ccibeekeoc42/PythonTips#schedule-functions)
+- [Send Text Messages](https://github.com/ccibeekeoc42/PythonTips#send-text-messages)
 - [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
 
 ### Binary Search
@@ -140,6 +146,44 @@ Image(filename='test.png')
 import wifi_qrcode_generator as qr
 from IPython.display import Image
 qr.wifi_qrcode('WIFI name', False, 'WPA', 'WIFI password')
+```
+
+### Schedule Functions
+
+- Ensure to install the schedule module
+  `!pip install schedule`
+
+```python
+def sayHi():
+  print("Hi")
+  return schedule.CancelJob
+
+import schedule, time
+schedule.every(3).seconds.do(sayHi)
+
+while True:
+  schedule.run_pending()
+```
+
+### Send Text Messages
+
+- Ensure to use the textbelt API.
+  `!pip install schedule`
+
+```python
+def sendTextMessage(msg):
+  '''Sends scheduled text messages'''
+  import requests
+  resp = requests.post('https://textbelt.com/text', {
+    'phone': '9175363007',
+    'message': f'{msg}',
+    'key': 'textbelt',
+  })
+  print(resp.json)
+
+# Driver Code
+msg = 'Hello world'
+sendTextMessage(msg)
 ```
 
 ### Site Connectivity Checker
