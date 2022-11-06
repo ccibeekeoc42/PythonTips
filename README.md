@@ -2,6 +2,14 @@
 
 In this repo, we explore some tips and tricks and some short projects.
 
+### Table Of Content
+
+- [Binary Search](https://github.com/ccibeekeoc42/PythonTips#binary-search)
+- [Email Sender](https://github.com/ccibeekeoc42/PythonTips#email-sender)
+- [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
+- [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
+- [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
+
 ### Binary Search
 
 - Ensure to the list/ sequence is sorted in ascending order.
