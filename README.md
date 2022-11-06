@@ -90,3 +90,20 @@ import wifi_qrcode_generator as qr
 from IPython.display import Image
 qr.wifi_qrcode('WIFI name', False, 'WPA', 'WIFI password')
 ```
+
+### Site Connectivity Checker
+
+- The _urllib_ package should come installed by default. if not, use the command
+  `!pip install urllib`
+
+```python
+def checkSiteConnectivity(url):
+  '''Returns the status code of any url'''
+  import urllib.request as request
+  response = request.urlopen(url)
+  return f"The connection status code is: {response.getcode()}"
+
+# Driver Code
+url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1'
+print(checkSiteConnectivity(url))
+```
