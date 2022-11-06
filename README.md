@@ -32,27 +32,29 @@ search(nums, target)
 - Ensure to first setup 2FA with your email provider (Gmail)
 
 ```python
-import email, ssl, smtplib
+def sendEmail(sender, password, reciever, subject, message):
+  '''Sends emails using the smtp protocol'''
+  import email, ssl, smtplib
+  message = email.message.EmailMessage()
+  message['To'] = reciever
+  message['From'] = sender
+  message['Subject'] = subject
+  message['Date'] = email.utils.formatdate(localtime=True)
+  message['Message-ID'] = email.utils.make_msgid()
+  message.set_content(body)
 
-sender = 'sender@gmail.com'
-password = 'sender_password'
+  context = ssl.create_default_context()
+  with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
+    smtp.login(sender, password)
+    smtp.sendmail(sender, reciever, message.as_string())
+
+# Driver Code
+sender, password = 'sender@gmail.com', 'sender_password'
 reciever = 'reciever@gmail.com'
 
 subject = 'ANNONCEMENT'
-body = '''I am a hungry boy finally!!'''
-
-message = email.message.EmailMessage()
-message['To'] = reciever
-message['From'] = sender
-message['Subject'] = subject
-message['Date'] = email.utils.formatdate(localtime=True)
-message['Message-ID'] = email.utils.make_msgid()
-message.set_content(body)
-
-context = ssl.create_default_context()
-with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
-  smtp.login(sender, password)
-  smtp.sendmail(sender, reciever, message.as_string())
+body = '''"With great power, comes great responsibility." - Uncle Ben.'''
+sendEmail(sender, password, reciever, subject, body)
 ```
 
 ### QR Code Generator (texts & URLs)
@@ -75,4 +77,15 @@ def generateQRcode(text):
 # Driver Code
 generateQRcode('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
 Image(filename='test.png')
+```
+
+### QR Code Generator (WIFI)
+
+- Ensure to install the wifi-qrcode-generator module
+  `!pip install wifi-qrcode-generator`
+
+```python
+import wifi_qrcode_generator as qr
+from IPython.display import Image
+qr.wifi_qrcode('WIFI name', False, 'WPA', 'WIFI password')
 ```
