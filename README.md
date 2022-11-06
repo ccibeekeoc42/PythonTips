@@ -54,3 +54,25 @@ with smtplib.SMTP_SSL('smtp.gmail.com', 465, context=context) as smtp:
   smtp.login(sender, password)
   smtp.sendmail(sender, reciever, message.as_string())
 ```
+
+### QR Code Generator (texts & URLs)
+
+- Ensure to install the qrcode and image modules
+
+```python
+def generateQRcode(text):
+  '''returns image of a QR code'''
+  qr = qrcode.QRCode(
+      version=1,
+      error_correction=qrcode.constants.ERROR_CORRECT_L,
+      box_size=10, border=4,
+  )
+  qr.add_data(text)
+  qr.make(fit=True)
+  img = qr.make_image(fill_color="black", back_color="white")
+  img.save('test.png')
+
+# Driver Code
+generateQRcode('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+Image(filename='test.png')
+```
