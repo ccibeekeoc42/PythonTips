@@ -7,6 +7,7 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Binary Search](https://github.com/ccibeekeoc42/PythonTips#binary-search)
 - [Email Sender](https://github.com/ccibeekeoc42/PythonTips#email-sender)
 - [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
+- [Face Detection](https://github.com/ccibeekeoc42/PythonTips#face-detection)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
 - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
 - [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
@@ -84,6 +85,27 @@ def dictionary(word):
 # Driver Code
 word = input("Enter a word: ")
 print(dictionary(word))
+```
+
+### Face Detection
+
+- Ensure to first install the _opencv_ module.
+  `!pip install opencv-python`
+
+```python
+import cv2
+
+face_cascade_file = cv2.CascadeClassifier('/content/face_detection/haarcascade_frontalface_default.xml')
+img = cv2.imread('/content/face_detection/chris.png')
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+faces = face_cascade_file.detectMultiScale(gray, 1.1, 4)
+# Drawing rectangle around face
+for (x, y, w, h) in faces:
+  cv2.rectangle(img, (x,y), (x+w, y+h), (0, 225, 0), 2)
+
+cv2.imwrite("face_detected.jpg", img)
+from IPython.display import Image
+Image(filename='face_detected.jpg')
 ```
 
 ### QR Code Generator (texts & URLs)
