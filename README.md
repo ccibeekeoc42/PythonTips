@@ -6,6 +6,7 @@ In this repo, we explore some tips and tricks and some short projects.
 
 - [Binary Search](https://github.com/ccibeekeoc42/PythonTips#binary-search)
 - [Email Sender](https://github.com/ccibeekeoc42/PythonTips#email-sender)
+- [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
 - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
 - [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
@@ -63,6 +64,26 @@ reciever = 'reciever@gmail.com'
 subject = 'ANNONCEMENT'
 body = '''"With great power, comes great responsibility." - Uncle Ben.'''
 sendEmail(sender, password, reciever, subject, body)
+```
+
+### English Dictionary
+
+- Ensure to first install the _PyDictionary_ module.
+  `!pip install PyDictionary`
+
+```python
+def dictionary(word):
+  '''Returns the meaning of the word'''
+  from PyDictionary import PyDictionary
+  diction = PyDictionary()
+  result = diction.meaning(word)
+  for key, value in result.items():
+    for idx,item in enumerate(value):
+      print(f"[{idx+1}] [{key}]: {item}")
+
+# Driver Code
+word = input("Enter a word: ")
+print(dictionary(word))
 ```
 
 ### QR Code Generator (texts & URLs)
