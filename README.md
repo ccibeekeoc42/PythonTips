@@ -12,6 +12,8 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Email Sender](https://github.com/ccibeekeoc42/PythonTips#email-sender)
 - [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
 - [Face Detection](https://github.com/ccibeekeoc42/PythonTips#face-detection)
+- [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
+- [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
 - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
 - [Schedule Functions](https://github.com/ccibeekeoc42/PythonTips#schedule-functions)
@@ -112,6 +114,34 @@ for (x, y, w, h) in faces:
 cv2.imwrite("face_detected.jpg", img)
 from IPython.display import Image
 Image(filename='face_detected.jpg')
+```
+
+### Image Manipulation (Resizing)
+
+- The _PIL_ midule should come by default. If not, use this command.
+  `!pip install pillow`
+
+```python
+from PIL import Image
+img = Image.open('/content/me.jpg')
+resized_img = img.resize((150, 150))
+resized_img.save('me_150.jpg')
+
+display(resized_img)
+```
+
+### Image Manipulation (Remove Background)
+
+- The _PIL_ midule should come by default. However, you need to install the _rembg_ module.
+  `!pip install pillow` and `!pip install rembg`
+
+```python
+from PIL import Image
+from rembg import remove
+img = Image.open('/content/me_150.jpg')
+rem_back_img = remove(img)
+
+display(rem_back_img)
 ```
 
 ### QR Code Generator (texts & URLs)
