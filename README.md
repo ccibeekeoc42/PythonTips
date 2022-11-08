@@ -19,6 +19,7 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Schedule Functions](https://github.com/ccibeekeoc42/PythonTips#schedule-functions)
 - [Send Text Messages](https://github.com/ccibeekeoc42/PythonTips#send-text-messages)
 - [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
+- [Using Pipes for Cleaner Code](https://github.com/ccibeekeoc42/PythonTips#using-pipes-for-cleaner-code)
 
 ### Binary Search
 
