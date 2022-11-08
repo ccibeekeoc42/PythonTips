@@ -19,6 +19,7 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Schedule Functions](https://github.com/ccibeekeoc42/PythonTips#schedule-functions)
 - [Send Text Messages](https://github.com/ccibeekeoc42/PythonTips#send-text-messages)
 - [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
+- [Timing Your Code](https://github.com/ccibeekeoc42/PythonTips#timing-your-code)
 - [Using Pipes for Cleaner Code](https://github.com/ccibeekeoc42/PythonTips#using-pipes-for-cleaner-code)
 
 ### Binary Search
@@ -232,6 +233,26 @@ def checkSiteConnectivity(url):
 # Driver Code
 url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1'
 print(checkSiteConnectivity(url))
+```
+
+### Timing Your Code
+
+- The time module should come by default. Ensure to import it.
+
+```python
+import time
+
+# Method 1
+start = time.time()
+time.sleep(5)
+end = time.time()
+print(end - start)
+
+# method 2
+start = time.perf_counter()
+time.sleep(5)
+end = time.perf_counter()
+print(end - start)
 ```
 
 ### Using Pipes for Cleaner Code
