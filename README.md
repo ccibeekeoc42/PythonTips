@@ -118,7 +118,7 @@ Image(filename='face_detected.jpg')
 
 ### Image Manipulation (Resizing)
 
-- The _PIL_ midule should come by default. If not, use this command.
+- The _PIL_ module should come by default. If not, use this command.
   `!pip install pillow`
 
 ```python
@@ -132,7 +132,7 @@ display(resized_img)
 
 ### Image Manipulation (Remove Background)
 
-- The _PIL_ midule should come by default. However, you need to install the _rembg_ module.
+- The _PIL_ module should come by default. However, you need to install the _rembg_ module.
   `!pip install pillow` and `!pip install rembg`
 
 ```python
@@ -231,4 +231,28 @@ def checkSiteConnectivity(url):
 # Driver Code
 url = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1'
 print(checkSiteConnectivity(url))
+```
+
+### Using Pipes for Cleaner Code
+
+- Ensure to install the _pipe_ package using the command.
+  `!pip install pipe`
+
+```python
+from pipe import select, where
+
+nums = [1,2,3,4,5,6,7,8,9]
+# Without Pipes
+without_pipes = list(
+    filter(lambda x: x % 2 == 0,
+            map(lambda x: x ** 2, nums))
+)
+
+# With Pipes
+with_pipes =list(
+    nums | select(lambda x: x ** 2) | where(lambda x: x % 2 == 0)
+)
+
+print(without_pipes)
+print(with_pipes)
 ```
