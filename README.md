@@ -8,6 +8,7 @@ In this repo, we explore some tips and tricks and some short projects.
 
 ### Table Of Content
 
+- [Annotate Dataset Features](https://github.com/ccibeekeoc42/PythonTips#annotate-dataset-features)
 - [Binary Search](https://github.com/ccibeekeoc42/PythonTips#binary-search)
 - [Email Sender](https://github.com/ccibeekeoc42/PythonTips#email-sender)
 - [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
@@ -21,6 +22,20 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
 - [Timing Your Code](https://github.com/ccibeekeoc42/PythonTips#timing-your-code)
 - [Using Pipes for Cleaner Code](https://github.com/ccibeekeoc42/PythonTips#using-pipes-for-cleaner-code)
+
+### Annotate Dataset Features
+
+- Ensure to first install the _pigeon_ module.
+  `!pip install pigeon-jupyter`
+
+```python
+from pigeon import annotate
+
+data = annotate(
+    ["The food taste good.", "Very awesome resturant!", "Terrible place."],
+    options=["positive", "negative"]
+)
+```
 
 ### Binary Search
 
