@@ -14,6 +14,7 @@ In this repo, we explore some tips and tricks and some short projects.
 - [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
 - [Face Detection](https://github.com/ccibeekeoc42/PythonTips#face-detection)
 - [Files and Folders (Creation)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
+- [Files and Folders (Get Specific Files)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-get-specific-files)
 - [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
 - [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
 - [Math to Latex Description](https://github.com/ccibeekeoc42/PythonTips#math-to-latex-description)
@@ -149,6 +150,20 @@ weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4']
 for i, month in enumerate(months, start=1):
   for week in weeks:
     Path(f"2022/{i}.{month}/{week}").mkdir(parents=True,exist_ok=True)
+```
+
+### Files and Folders (Get Specific Files)
+
+- Both the _pathlib_ and the calendar modules come with the default python installation.
+
+```python
+from pathlib import Path
+
+folder = Path('.')
+paths = folder.glob('**/*.csv')
+for path in paths:
+  if path.is_file():
+    print(path)
 ```
 
 ### Image Manipulation (Resizing)
