@@ -13,6 +13,7 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Email Sender](https://github.com/ccibeekeoc42/PythonTips#email-sender)
 - [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
 - [Face Detection](https://github.com/ccibeekeoc42/PythonTips#face-detection)
+- [Files and Folders (Creation)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
 - [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
 - [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
@@ -133,6 +134,22 @@ from IPython.display import Image
 Image(filename='face_detected.jpg')
 ```
 
+### Files and Folders (Creation)
+
+- Both the pathlib and the calendar modules come with the default python installation.
+
+```python
+from pathlib import Path
+import calendar
+
+months = list(calendar.month_name[1:])
+weeks = ['Week 1', 'Week 2', 'Week 3', 'Week 4']
+
+for i, month in enumerate(months, start=1):
+  for week in weeks:
+    Path(f"2022/{i}.{month}/{week}").mkdir(parents=True,exist_ok=True)
+```
+
 ### Image Manipulation (Resizing)
 
 - The _PIL_ module should come by default. If not, use this command.
@@ -215,7 +232,6 @@ while True:
 ### Send Text Messages
 
 - Ensure to use the textbelt API.
-  `!pip install schedule`
 
 ```python
 def sendTextMessage(msg):
