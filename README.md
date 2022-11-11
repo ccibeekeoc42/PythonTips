@@ -14,11 +14,12 @@ In this repo, we explore some tips and tricks and some short projects.
 - [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
 - [Face Detection](https://github.com/ccibeekeoc42/PythonTips#face-detection)
 - Files, Folders, and Directories
-  - [Files and Folders (Creation)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
-  - [Files and Folders (Get Specific Files)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-get-specific-files)
+  - [Create Directory](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
+  - [Get Specific Files](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-get-specific-files)
+  - [Unzip Files](https://github.com/ccibeekeoc42/PythonTips#unzip-files)
 - Image Handling
-  - [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
-  - [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
+  - [Resizing](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
+  - [Remove Background](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
 - [Math to Latex Description](https://github.com/ccibeekeoc42/PythonTips#math-to-latex-description)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
 - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
@@ -140,7 +141,7 @@ Image(filename='face_detected.jpg')
 
 ### Files and Folders (Creation)
 
-- Both the _pathlib_ and the calendar modules come with the default python installation.
+- Both the _pathlib_ and the _calendar_ modules come with the default python installation.
 
 ```python
 from pathlib import Path
@@ -156,7 +157,7 @@ for i, month in enumerate(months, start=1):
 
 ### Files and Folders (Get Specific Files)
 
-- Both the _pathlib_ and the calendar modules come with the default python installation.
+- Both the _pathlib_ modules come with the default python installation.
 
 ```python
 from pathlib import Path
@@ -166,6 +167,22 @@ paths = folder.glob('**/*.csv')
 for path in paths:
   if path.is_file():
     print(path)
+```
+
+### Unzip Files
+
+- Both the _pathlib_ and the _zipfile_ modules come with the default python installation.
+
+```python
+from pathlib import Path
+import zipfile
+
+current_directory = Path('.')
+target_directory = Path('temp')
+
+for path in current_directory.glob('*.zip'):
+    with zipfile.ZipFile(path, 'r') as zip_file:
+        zip_file.extractall(path=target_directory)
 ```
 
 ### Image Manipulation (Resizing)
