@@ -13,8 +13,9 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Email Sender](https://github.com/ccibeekeoc42/PythonTips#email-sender)
 - [English Dictionary](https://github.com/ccibeekeoc42/PythonTips#english-dictionary)
 - [Face Detection](https://github.com/ccibeekeoc42/PythonTips#face-detection)
-- [Files and Folders (Creation)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
-- [Files and Folders (Get Specific Files)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-get-specific-files)
+- Files, Folders, and Directories
+  - [Files and Folders (Creation)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
+  - [Files and Folders (Get Specific Files)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-get-specific-files)
 - [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
 - [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
 - [Math to Latex Description](https://github.com/ccibeekeoc42/PythonTips#math-to-latex-description)
