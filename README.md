@@ -16,8 +16,9 @@ In this repo, we explore some tips and tricks and some short projects.
 - Files, Folders, and Directories
   - [Files and Folders (Creation)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
   - [Files and Folders (Get Specific Files)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-get-specific-files)
-- [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
-- [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
+- Image Handling
+  - [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
+  - [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
 - [Math to Latex Description](https://github.com/ccibeekeoc42/PythonTips#math-to-latex-description)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
 - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
