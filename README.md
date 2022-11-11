@@ -16,6 +16,7 @@ In this repo, we explore some tips and tricks and some short projects.
 - [Files and Folders (Creation)](https://github.com/ccibeekeoc42/PythonTips#files-and-folders-creation)
 - [Image Manipulation (Resizing)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
 - [Image Manipulation (Remove Background)](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
+- [Math to Latex Description](https://github.com/ccibeekeoc42/PythonTips#math-to-latex-description)
 - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
 - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
 - [Schedule Functions](https://github.com/ccibeekeoc42/PythonTips#schedule-functions)
@@ -136,7 +137,7 @@ Image(filename='face_detected.jpg')
 
 ### Files and Folders (Creation)
 
-- Both the pathlib and the calendar modules come with the default python installation.
+- Both the _pathlib_ and the calendar modules come with the default python installation.
 
 ```python
 from pathlib import Path
@@ -176,6 +177,21 @@ img = Image.open('/content/me_150.jpg')
 rem_back_img = remove(img)
 
 display(rem_back_img)
+```
+
+### Math to Latex Description
+
+- The _math_ module comes with default python but the _latexify-py_ module would need to be installed.
+  `!pip install latexify-py`.
+
+```python
+import math
+import latexify
+
+@latexify.with_latex
+def solve(a,b,c):
+  return (-b + math.sqrt(b**2 - 4*a*c)) / (2*a)
+solve
 ```
 
 ### QR Code Generator (texts & URLs)
