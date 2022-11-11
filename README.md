@@ -21,8 +21,9 @@ In this repo, we explore some tips and tricks and some short projects.
   - [Resizing](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-resizing)
   - [Remove Background](https://github.com/ccibeekeoc42/PythonTips#image-manipulation-remove-background)
 - [Math to Latex Description](https://github.com/ccibeekeoc42/PythonTips#math-to-latex-description)
-- [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
-- [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
+- QR Codes
+  - [QR Code Generator (texts & URLs)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-texts--urls)
+  - [QR Code Generator (WIFI)](https://github.com/ccibeekeoc42/PythonTips#qr-code-generator-wifi)
 - [Schedule Functions](https://github.com/ccibeekeoc42/PythonTips#schedule-functions)
 - [Send Text Messages](https://github.com/ccibeekeoc42/PythonTips#send-text-messages)
 - [Site Connectivity Checker](https://github.com/ccibeekeoc42/PythonTips#site-connectivity-checker)
